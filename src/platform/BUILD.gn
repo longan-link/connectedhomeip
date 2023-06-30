@@ -314,6 +314,11 @@ if (chip_device_platform != "none" && chip_device_platform != "external") {
         "CHIP_DEVICE_LAYER_TARGET_ASR=1",
         "CHIP_DEVICE_LAYER_TARGET=ASR",
       ]
+    }  else if (chip_device_platform == "Lightning") {
+      defines += [
+        "CHIP_DEVICE_LAYER_TARGET_Lightning=1",
+        "CHIP_DEVICE_LAYER_TARGET=Lightning",
+      ]
     }
 
     if (chip_device_config_device_software_version != "") {
@@ -512,6 +517,8 @@ if (chip_device_platform != "none") {
       _platform_target = "openiotsdk"
     } else if (chip_device_platform == "asr") {
       _platform_target = "ASR"
+    } else if (chip_device_platform == "Lightning") {
+      _platform_target = "Lightning"
     } else {
       assert(false, "Unknown chip_device_platform: ${chip_device_platform}")
     }
