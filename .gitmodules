@@ -308,7 +308,7 @@
 	url = https://github.com/google/perfetto.git
 	branch = master
 	platforms = linux,android
-[submodule "third_party/lightning/ln882h_sdk"]
-	path = third_party/lightning/ln882h_sdk
-	url = https://github.com/longan-link/ln882h_sdk.git
+[submodule "third_party/lightning/ln882h"]
+	path = third_party/lightning/ln882h
+	url = https://github.com/lightningsemi/ln882h.git
 	branch = dev_matter
